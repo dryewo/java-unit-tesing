@@ -1,18 +1,24 @@
 package com.example.mvn_hello;
 
-import java.util.Random;
-
 public class Roulette {
 
-    public static void doRoulette() {
-        final int outcome = new Random().nextInt(6);
-        if (outcome == 0)
-            formatC();
-        else
-            System.out.println("Someone is lucky today.");
+    private final IRandom random;
+    private final IFileUtils fileUtils;
+
+    public Roulette(IRandom random, IFileUtils fileUtils) throws IllegalArgumentException {
+        if (random == null)
+            throw new IllegalArgumentException("cannot random null");
+        this.random = random;
+        if (fileUtils == null)
+            throw new IllegalArgumentException("cannot fileUtils null");
+        this.fileUtils = fileUtils;
     }
 
-    private static void formatC() {
-        System.out.println("Formatting C:");
+    public void doRoulette() {
+        final int outcome = random.random();
+        if (outcome == 0)
+            fileUtils.formatC();
+        else
+            System.out.println("Someone is lucky today.");
     }
 }
