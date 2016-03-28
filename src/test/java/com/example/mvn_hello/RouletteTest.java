@@ -1,6 +1,5 @@
 package com.example.mvn_hello;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
