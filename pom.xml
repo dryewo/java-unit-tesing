@@ -12,7 +12,7 @@
             <extension>
                 <groupId>org.springframework.build</groupId>
                 <artifactId>aws-maven</artifactId>
-                <version>5.0.0.RELEASE</version>
+                <version>5.1.0.BUILD-SNAPSHOT</version>
             </extension>
         </extensions>
     </build>
@@ -31,18 +31,18 @@
     </dependencies>
     <distributionManagement>
         <snapshotRepository>
-            <id>maven.automata.zalan.do</id>
-            <url>s3://maven.automata.zalan.do/snapshot</url>
+            <id>maven.ci.zalan.do</id>
+            <url>s3://maven.ci.zalan.do/snapshot</url>
         </snapshotRepository>
         <repository>
-            <id>maven.automata.zalan.do</id>
-            <url>s3://maven.automata.zalan.do/release</url>
+            <id>maven.ci.zalan.do</id>
+            <url>s3://maven.ci.zalan.do/release</url>
         </repository>
     </distributionManagement>
     <repositories>
         <repository>
-            <id>maven.automata.zalan.do</id>
-            <url>s3://maven.automata.zalan.do/release</url>
+            <id>maven.ci.zalan.do</id>
+            <url>s3://maven.ci.zalan.do/release</url>
         </repository>
     </repositories>
 </project>
